@@ -30,7 +30,7 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    trie.h
+        trie.h
 
 FORMS += \
         mainwindow.ui
