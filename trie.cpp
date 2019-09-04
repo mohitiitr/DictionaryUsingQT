@@ -1,6 +1,21 @@
 
+/**
+*@file trie.cpp
+*@brief this cpp file contains implementations to the functions defined(declared) in the trie.h
+*
+*@author MOhit KUmar
+*
+*@date 03/09/19
+*/
 #include "trie.h"
 
+
+
+/**
+*This method will be used to create a new node
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 Trie* getNewTrieNode()
 {
     Trie* node = new Trie;
@@ -9,6 +24,14 @@ Trie* getNewTrieNode()
     return node;
 }
 
+/**
+*This method will be used to insrt a node in the trie data structure
+*@param Trie*& head             the root of the trie data structure
+*@param string str              the string to be inserted
+*@param string mean             the meaning of the word
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 void insert(Trie*& head, string str ,string mean)
 {
     if (head == nullptr)
@@ -35,7 +58,13 @@ void insert(Trie*& head, string str ,string mean)
 
 }
 
-
+/**
+*This method will be used to search a node in the trie data structure and return its corresponding meaning
+*@param Trie*& head             the root of the trie data structure
+*@param string str              the string to be searched in the trie data structure
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 string search(Trie* head, string str)
 {
     // return false if Trie is empty
@@ -64,11 +93,18 @@ string search(Trie* head, string str)
 
 
 
+/**
+*This method will be used to load the dictionary in the trie data structure
+*@param Trie*& head             the root of the trie data structure
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 void loadDataInTrie(Trie*& head) {
 
     qCritical()<< "C++ Style Info Message";
 
     ifstream file ( "/home/maharaja40/QtProjects/Dictionary/input_file.csv" );
+//    ifstream file ( "input_file.csv" );
 
     qCritical()<< "C++ Style Info Message";
 

@@ -1,8 +1,24 @@
 
+/**
+*@file mainwindow.cpp
+*@brief this cpp file contains mainwindow code for the ui part of the applicatio
+*
+*@author MOhit KUmar
+*
+*@date 03/09/19
+*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 
+
+/**
+*This method will be used when main window is to be created
+*@param    QWidget *parent)  QMainWindow(parent)            the mainwindow object
+*@param    ui(new Ui::MainWindow)                           the ui to be shown in the mainwindow object
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -11,6 +27,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
+
+/**
+*This method will be used when main window is to be distructed
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -18,7 +40,11 @@ MainWindow::~MainWindow()
 
 
 
-
+/**
+*This method will be used when push button will be clicked to search in the dictionary and then to display the result
+*@author MOHIT KUMAR
+*@date 03/09/19
+*/
 void MainWindow::on_btn_clicked()
 {
     QString word = ui->inputbox->text();
