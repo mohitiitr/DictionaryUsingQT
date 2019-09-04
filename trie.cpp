@@ -103,8 +103,8 @@ void loadDataInTrie(Trie*& head) {
 
     qCritical()<< "C++ Style Info Message";
 
-    ifstream file ( "/home/maharaja40/QtProjects/Dictionary/input_file.csv" );
-//    ifstream file ( "input_file.csv" );
+//    ifstream file ( "/home/maharaja40/QtProjects/Dictionary/input_file.csv" );
+    ifstream file ( "input_file.csv" );
 
     qCritical()<< "C++ Style Info Message";
 
